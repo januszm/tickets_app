@@ -46,5 +46,24 @@ module.exports = function(environment) {
   }
 
   ENV.APP.API_HOST = process.env.API_HOST
+
+  ENV['ember-simple-auth'] = {
+    authorizer: 'authorizer:jwt',
+    routeAfterAuthentication: '/issues'
+  };
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: `${ENV.APP.API_HOST}/user_token/`,
+    identificationField: 'email',
+    passwordField: 'password',
+    tokenPropertyName: 'jwt',
+    authorizationPrefix: 'Bearer ',
+    authorizationHeaderName: 'Authorization',
+    headers: {},
+    refreshAccessTokens: true,
+    serverTokenRefreshEndpoint: '/user_token_refresh/',
+    tokenExpireName: 'exp',
+    refreshLeeway: 0
+  };
+
   return ENV;
 };
