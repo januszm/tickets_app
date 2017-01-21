@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
         authenticator = 'authenticator:jwt';
 
       this.get('session').authenticate(authenticator, credentials);
+      this.transitionToRoute('index');
     }
   }
 });
