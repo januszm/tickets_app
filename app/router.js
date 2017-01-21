@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('login');
   this.route('issues');
   this.route('users');
+  this.route('not-found', { path: '/*path' });
 });
 
 export default Router;
