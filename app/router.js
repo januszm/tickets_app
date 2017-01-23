@@ -8,7 +8,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
-  this.route('issues');
+  this.route('issues', function() {
+    this.route('new');
+    this.route('show', { path: '/:issue_id' });
+  });
   this.route('users');
   this.route('not-found', { path: '/*path' });
 });
