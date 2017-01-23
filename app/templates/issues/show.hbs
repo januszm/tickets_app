@@ -1,0 +1,18 @@
+<p>
+  {{#link-to 'issues.index'}}back to list{{/link-to}}
+</p>
+
+<p>ID: {{model.id}}</p>
+<p>
+  Title:<br>
+  <i>{{model.title}}</i>
+</p>
+
+<p>
+  Description:<br>
+  {{model.description}}
+</p>
+
+<button class="btn btn-danger btn-xs" {{action 'deleteIssue' model}}>Delete</button>
+
+{{outlet}}
