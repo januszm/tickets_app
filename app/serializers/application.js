@@ -1,14 +1,18 @@
 import DS from 'ember-data';
 import Ember from 'ember';
 
-let underscore = Ember.String.underscore;
+let decamelize = Ember.String.underscore;
 
 export default DS.JSONAPISerializer.extend({
   keyForAttribute: function(attr) {
-    return underscore(attr);
+    return decamelize(attr);
   },
 
   keyForRelationship: function(rawKey) {
-    return underscore(rawKey);
+    return decamelize(rawKey);
   }
+
+  //payloadKeyFromModelName(modelName) {
+  //  return singularize(capitalize(modelName));
+  //}
 });
