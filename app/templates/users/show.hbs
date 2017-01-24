@@ -1,0 +1,11 @@
+<p>
+  {{#link-to 'users.index'}}
+    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+    back to list
+  {{/link-to}}
+</p>
+
+<p>Email: {{model.email}}</p>
+<p>Name: {{model.fullName}}</p>
+
+{{outlet}}

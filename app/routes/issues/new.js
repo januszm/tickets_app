@@ -4,7 +4,7 @@ const { service } = Ember.inject;
 
 export default Ember.Route.extend({
   model() {
-    return this.store.createRecord('issue', { creator_id: this.currentUserId() });
+    return this.store.createRecord('issue', { creatorId: this.currentUserId() });
   },
   session: service('session'),
   currentUserId() {
