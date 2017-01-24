@@ -12,7 +12,9 @@ Router.map(function() {
     this.route('new');
     this.route('show', { path: '/:issue_id' });
   });
-  this.route('users');
+  this.route('users', function() {
+    this.route('show', { path: '/:user_id' });
+  });
   this.route('not-found', { path: '/*path' });
 });
 
