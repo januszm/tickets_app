@@ -29,3 +29,12 @@
 <div class="container-fluid">
   {{outlet}}
 </div>
+
+<br>
+<footer>
+  <div class='container'>
+    {{#if getCurrentUser.admin}}
+      <button class='btn btn-alert'>Link to Admin</button>
+    {{/if}}
+  </div>
+</footer>
