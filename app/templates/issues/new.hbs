@@ -2,7 +2,6 @@
 
 <form>
 <div class="form-horizontal">
-  {{log model.creator_id}}
   {{input type="hidden" value=model.creator_id }}
   <div class="form-group">
     <label class="col-sm-2 control-label">Title</label>
@@ -19,7 +18,7 @@
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-primary" {{action 'saveIssue' model}}>Create</button>
-      <button {{action 'cancel'}} class="btn">Cancel</button>
+      <button {{action 'cancel' model}} class="btn">Cancel</button>
     </div>
   </div>
 </div>
