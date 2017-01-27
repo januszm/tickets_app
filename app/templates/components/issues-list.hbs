@@ -8,7 +8,7 @@
         {{link-to 'Assign' 'issues.assign' issue class='btn btn-success btn-xs'}}
       {{else if issue.isClosed}}
       {{else}}
-        {{link-to 'Finalize' 'issues.show' issue class='btn btn-warning btn-xs'}}
+        {{link-to 'Finalize' 'issues.finalize' issue class='btn btn-warning btn-xs'}}
       {{/if}}
       {{#link-to 'issues.show' issue}}{{issue.title}}{{/link-to}}
       <span class="label label-primary">{{issue.status}}</span>
