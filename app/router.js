@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('issues', function() {
     this.route('new');
     this.route('show', { path: '/:issue_id' });
+    this.route('assign', { path: '/:issue_id/assign' });
   });
   this.route('users', function() {
     this.route('show', { path: '/:user_id' });
