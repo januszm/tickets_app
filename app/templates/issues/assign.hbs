@@ -12,11 +12,11 @@
             </div>
             <div>
               Agent:
-                <select>
+              {{#x-select value=model.issue.assigneeId as |xs|}}
                 {{#each model.users as |agent|}}
-                  <option value={{agent.id}}>{{agent.fullName}}</option>
+                  {{#xs.option value=agent.id}}{{agent.fullName}}{{/xs.option}}
                 {{/each}}
-              </select>
+              {{/x-select}}
             </div>
           </div>
 
